@@ -46,7 +46,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         user = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("User");
         dialog = new ProgressDialog(this);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void uploadData(final String userName, final String emailReg, String passReg){
-        dialog.setMessage("Mohon Menunggu");
+        dialog.setMessage("Loading");
         dialog.show();
         auth.createUserWithEmailAndPassword(emailReg, passReg)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -76,9 +75,13 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            user = FirebaseAuth.getInstance().getCurrentUser();
+                            FirebaseUser user = auth.getCurrentUser();
+                            assert user != null;
+//                            user = FirebaseAuth.getInstance().getCurrentUser();
                             String userId = user.getUid();
-                            reference.child(userId);
+                            reference = FirebaseDatabase.getInstance().getReference("User").child(userId);
+
+//                            reference.child(userId);
 
                             HashMap<String, String> hashMap = new HashMap<>();
                             hashMap.put("userid", userId);
