@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "2792811753",
+    "firebase_url": "https://projectolx-b41ab.firebaseio.com",
+    "project_id": "projectolx-b41ab",
+    "storage_bucket": "projectolx-b41ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2792811753:android:787ba6a981af38fb",
+        "android_client_info": {
+          "package_name": "id.ac.mercubuana.joko_ss.projectolx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2792811753-qh6rvn1gr5qjj99ma8m0dk5mul096psk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.ac.mercubuana.joko_ss.projectolx",
+            "certificate_hash": "a9915c4da6f5fd0e75e7768762ba9254e48a381c"
+          }
+        },
+        {
+          "client_id": "2792811753-cbetvtvc62djgi1ecl2bhpq9un6cgn4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa-TzjLbTgrnAPAE96Fr7Ea0aee8UjU3s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2792811753-cbetvtvc62djgi1ecl2bhpq9un6cgn4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
